@@ -14,6 +14,11 @@ Vue.use(VueAxios, axios)
 
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
+  let token_ = sessionStorage.getItem('token')
+  if (token_) {
+    config.headers.Authorization = token_
+    return config
+  }
   // 在发送请求之前做些什么
   return config;
 }, function (error) {

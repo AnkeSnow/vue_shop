@@ -76,14 +76,7 @@ export default {
     async success() {
       this.isShow = false;
 
-      // let res = await this.axios.post('/login', {
-      //   username: this.loginInof.username,
-      //   password: this.loginInof.password
-      // })
-
       let res = await this.axios.post('/login', this.loginInof)
-
-      console.log('登录后的数据', res);
 
       if (res.meta.status == 200) {
         this.$message({
