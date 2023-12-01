@@ -17,54 +17,84 @@ const routes = [
       {
         path: 'welcome',
         name: 'welcome',
-        component: () => import('@/components/Welcome.vue')
+        component: () => import('@/components/Welcome.vue'),
+        meta: {
+          title: '首页'
+        }
       },
       {
         path: 'users',
         name: 'users',
-        component: () => import('@/components/Users.vue')
+        component: () => import('@/components/Users.vue'),
+        meta: {
+          title: '用户列表'
+        }
       },
       {
         path: 'roles',
         name: 'roles',
-        component: () => import('@/components/Roles.vue')
+        component: () => import('@/components/Roles.vue'),
+        meta: {
+          title: '角色列表'
+        }
       },
       {
         path: 'rights',
         name: 'rights',
-        component: () => import('@/components/Rights.vue')
+        component: () => import('@/components/Rights.vue'),
+        meta: {
+          title: '权限列表'
+        }
       },
       {
         path: 'goods',
         name: 'goods',
-        component: () => import('@/components/Goods.vue')
+        component: () => import('@/components/Goods.vue'),
+        meta: {
+          title: '商品列表'
+        }
       },
       {
         path: 'params',
         name: 'params',
-        component: () => import('@/components/Params.vue')
+        component: () => import('@/components/Params.vue'),
+        meta: {
+          title: '分类参数'
+        }
       },
       {
         path: 'categories',
         name: 'categories',
-        component: () => import('@/components/Categories.vue')
+        component: () => import('@/components/Categories.vue'),
+        meta: {
+          title: '商品分类'
+        }
       },
       {
         path: 'orders',
         name: 'orders',
-        component: () => import('@/components/Orders.vue')
+        component: () => import('@/components/Orders.vue'),
+        meta: {
+          title: '订单列表'
+        }
       },
       {
         path: 'reports',
         name: 'reports',
-        component: () => import('@/components/Reports.vue')
+        component: () => import('@/components/Reports.vue'),
+        meta: {
+          title: '数据报表'
+        }
       }
     ]
   },
   {
     path: '/login',
     name: 'login',
-    component: () => import('@/views/login.vue')
+    component: () => import('@/views/login.vue'),
+    meta: {
+      title: '登录'
+    }
   }
 ]
 
@@ -89,6 +119,10 @@ router.beforeEach((to, form, next) => {
   } else {
     next()
   }
+})
+
+router.afterEach((to, form) => {
+  document.title = to.meta.title;
 })
 
 
