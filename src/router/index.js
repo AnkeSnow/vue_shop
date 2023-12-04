@@ -25,7 +25,7 @@ const routes = [
       {
         path: 'users',
         name: 'users',
-        component: () => import('@/components/Users.vue'),
+        component: () => import('@/components/user/Users.vue'),
         meta: {
           title: '用户列表'
         }
@@ -33,7 +33,7 @@ const routes = [
       {
         path: 'roles',
         name: 'roles',
-        component: () => import('@/components/Roles.vue'),
+        component: () => import('@/components/power/Roles.vue'),
         meta: {
           title: '角色列表'
         }
@@ -41,7 +41,7 @@ const routes = [
       {
         path: 'rights',
         name: 'rights',
-        component: () => import('@/components/Rights.vue'),
+        component: () => import('@/components/power/Rights.vue'),
         meta: {
           title: '权限列表'
         }
@@ -49,7 +49,7 @@ const routes = [
       {
         path: 'goods',
         name: 'goods',
-        component: () => import('@/components/Goods.vue'),
+        component: () => import('@/components/goods/Goods.vue'),
         meta: {
           title: '商品列表'
         }
@@ -57,7 +57,7 @@ const routes = [
       {
         path: 'params',
         name: 'params',
-        component: () => import('@/components/Params.vue'),
+        component: () => import('@/components/goods/Params.vue'),
         meta: {
           title: '分类参数'
         }
@@ -65,7 +65,7 @@ const routes = [
       {
         path: 'categories',
         name: 'categories',
-        component: () => import('@/components/Categories.vue'),
+        component: () => import('@/components/goods/Categories.vue'),
         meta: {
           title: '商品分类'
         }

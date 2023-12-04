@@ -12,6 +12,9 @@ import VueAxios from 'vue-axios'
 axios.defaults.baseURL = 'http://www.chenfuguo.cn:8899/api/private/v1'
 Vue.use(VueAxios, axios)
 
+import TreeTable from 'vue-table-with-tree-grid'
+Vue.component('tree-table', TreeTable)
+
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
   let token_ = sessionStorage.getItem('token')
