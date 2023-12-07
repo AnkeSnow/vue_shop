@@ -52,6 +52,14 @@ const routes = [
         component: () => import('@/components/goods/Goods.vue'),
         meta: {
           title: '商品列表'
+        },
+      },
+      {
+        path: 'add',
+        name: 'add',
+        component: () => import('@/components/goods/Add.vue'),
+        meta: {
+          title: '添加商品'
         }
       },
       {
