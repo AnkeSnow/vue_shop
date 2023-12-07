@@ -81,7 +81,7 @@ const routes = [
       {
         path: 'orders',
         name: 'orders',
-        component: () => import('@/components/Orders.vue'),
+        component: () => import('@/components/orders/Orders.vue'),
         meta: {
           title: '订单列表'
         }
@@ -89,7 +89,7 @@ const routes = [
       {
         path: 'reports',
         name: 'reports',
-        component: () => import('@/components/Reports.vue'),
+        component: () => import('@/components/reports/Reports.vue'),
         meta: {
           title: '数据报表'
         }
