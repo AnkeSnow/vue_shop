@@ -35,5 +35,15 @@ body,
   // width: 100%;
   height: 100%;
   min-width: 1200px;
+
+  .el-breadcrumb__inner {
+    color: #fff;
+    font-size: 12px;
+  }
+
+  .el-breadcrumb,
+  .el-row {
+    margin-bottom: 15px;
+  }
 }
 </style>
