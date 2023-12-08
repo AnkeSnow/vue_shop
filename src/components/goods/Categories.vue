@@ -245,16 +245,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-::v-deep .el-breadcrumb__inner {
-    color: #fff;
-    font-size: 12px;
-}
-
-.el-breadcrumb__item:last-child ::v-deep .el-breadcrumb__inner {
-    color: #fff;
-    font-size: 12px;
-}
-
 .el-row,
 .tree-table {
     margin-bottom: 15px;
