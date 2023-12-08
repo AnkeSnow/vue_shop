@@ -81,7 +81,7 @@ const routes = [
       {
         path: 'orders',
         name: 'orders',
-        component: () => import('@/components/orders/Orders.vue'),
+        component: () => import('@/components/order/Orders.vue'),
         meta: {
           title: '订单列表'
         }
