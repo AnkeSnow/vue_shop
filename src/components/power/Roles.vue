@@ -25,9 +25,9 @@
                                 <i class="el-icon-caret-right"></i>
                             </el-col>
                             <!-- 渲染二级权限 -->
-                            <el-col :span="19">
+                            <el-col :spn="19">
                                 <el-row v-for="(item2, index2) in item1.children" :key="item2.id" :span="6"
-                                    :class="[index2 == 0 ? '' : 'bdtop', 'vcenter']">
+                                    :class="[index2 === 0 ? '' : 'bdtop', 'vcenter']">
                                     <!-- 二级 -->
                                     <el-col :span="6">
                                         <el-tag type="success" closable @close="removeRolesById(scope.row, item2.id)">

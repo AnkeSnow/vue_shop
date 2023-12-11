@@ -79,6 +79,7 @@ export default {
       let res = await this.axios.post('/login', this.loginInof)
 
       if (res.meta.status == 200) {
+        sessionStorage.setItem('token', res.data.token)
         this.$message({
           message: res.meta.msg,
           type: 'success',
@@ -87,7 +88,7 @@ export default {
             this.$router.push('/home').catch((erro) => { })
           }
         });
-        sessionStorage.setItem('token', res.data.token)
+        console.log(res);
       } else {
         this.$message({
           message: res.meta.msg,
